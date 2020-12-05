@@ -1,2 +1,2 @@
 # copr-neovim
-This repo contains rpm build spec for neovim git.
+This repo contains rpm build specs for neovim git.
