@@ -1,5 +1,5 @@
 %global         debug_package %{nil}
-%global         git_revision bfed67e00ecdf71e0c7d17b1fd802f223b42c800
+%global         git_revision 6c28bddfad73c527da5e5629919d617dffdea229
 %global         git_revision_short %(echo %{git_revision} | head -c 7)
 %global         build_timestamp %(date +"%Y%m%d")
 
@@ -41,13 +41,13 @@ parts of Vim, without compromise, and more.
 %autosetup -n %{name}-%{git_revision}
 
 %build
-%{__make} CMAKE_BUILD_TYPE=Release
+%__make CMAKE_BUILD_TYPE=Release
 
 %install
-%{make_install} CMAKE_INSTALL_PREFIX=%{_prefix}
+%make_install CMAKE_INSTALL_PREFIX=%{_prefix}
 
 %clean
-%{__rm} -rf %{buildroot}
+%__rm -rf %{buildroot}
 
 %files
 %license LICENSE
@@ -61,6 +61,8 @@ parts of Vim, without compromise, and more.
 %{_datadir}/nvim/*
 
 %changelog
+* Thu Dec 24 11:14:54 EST 2020 Peter Wu - v0.5.0
+- git commit 6c28bddfad73c527da5e5629919d617dffdea229
 * Tue Dec  9 09:52:19 EST 2020 Peter Wu - v0.5.0
 - git commit bfed67e00ecdf71e0c7d17b1fd802f223b42c800
 * Tue Dec  1 15:16:59 EST 2020 Peter Wu - v0.5.0
