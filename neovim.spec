@@ -1,5 +1,5 @@
 %global         debug_package %{nil}
-%global         git_revision 6c28bddfad73c527da5e5629919d617dffdea229
+%global         git_revision b535575acdb037c35a9b688bc2d8adc2f3dece8d
 %global         git_revision_short %(echo %{git_revision} | head -c 7)
 %global         build_timestamp %(date +"%Y%m%d")
 
@@ -61,6 +61,8 @@ parts of Vim, without compromise, and more.
 %{_datadir}/nvim/*
 
 %changelog
+* Sun Jan 10 10:55:03 EST 2021 Peter Wu - v0.5.0
+- git commit b535575acdb037c35a9b688bc2d8adc2f3dece8d
 * Thu Dec 24 11:14:54 EST 2020 Peter Wu - v0.5.0
 - git commit 6c28bddfad73c527da5e5629919d617dffdea229
 * Tue Dec  9 09:52:19 EST 2020 Peter Wu - v0.5.0
